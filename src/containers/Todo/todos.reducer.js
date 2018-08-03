@@ -1,18 +1,8 @@
-// const mockTodos = [
-//   {
-//     id: 1,
-//     text: '1-mock-todo',
-//     completed: false
-//   },
-//   {
-//     id: 2,
-//     text: '2-mock-todo',
-//     completed: false
-//   }
-// ]
+import { ADD_TODO, REMOVE_TODO} from './todos.constants'
+
 const todos = (state = [] , action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case ADD_TODO:
       return [
         ...state,
         {
@@ -21,7 +11,7 @@ const todos = (state = [] , action) => {
           completed: false
         }
       ]
-    case 'REMOVE_TODO':
+    case REMOVE_TODO:
       return state.filter(todo => (todo.id !== action.payload.id))
     default:
       return state
