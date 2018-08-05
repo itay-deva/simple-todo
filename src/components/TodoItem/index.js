@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 
 const TodoItem = ({todo,clickRemoveAction}) => {
   const onClickRemoveAction = () => clickRemoveAction(todo.id);
@@ -12,6 +14,11 @@ const TodoItem = ({todo,clickRemoveAction}) => {
       </div>
     </li>
   )
+}
+
+TodoItem.prototypes = {
+  clickRemoveAction:PropTypes.func,
+  todo:PropTypes.object,
 }
 
 export default TodoItem;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { addTodoAction, removeTodoAction } from '../actions/todos.actions';
 import AddTodo from '../components/AddTodo';
 import TodoItem from '../components/TodoItem';
@@ -26,6 +27,10 @@ const TodoList = (props) => {
         </ul>
       </div>
     )
+}
+
+TodoItem.prototypes = {
+  todos:PropTypes.arrayOf(PropTypes.object)
 }
 
 export default connect(
