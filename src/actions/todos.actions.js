@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO } from './todos.constants';
+import { ADD_TODO, REMOVE_TODO } from '../constants/todos.constants';
 
 let nextTodoId = 0
 

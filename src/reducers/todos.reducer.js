@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO} from './todos.constants'
+import { ADD_TODO, REMOVE_TODO} from '../constants/todos.constants'
 
 const todos = (state = [] , action) => {
   switch (action.type) {

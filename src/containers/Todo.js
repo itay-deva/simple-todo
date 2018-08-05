@@ -1,10 +1,8 @@
-import { connect } from 'react-redux'
-import { createSelector } from 'reselect'
-import { addTodoAction, removeTodoAction } from './todos.actions'
-import TodoList from './views/TodoList'
+import { connect } from 'react-redux';
+import { addTodoAction, removeTodoAction } from '../actions/todos.actions';
+import TodoList from '../components/views/TodoList';
+import totodsSelector from '../selectors/totos.selectors';
 
-const getTodos = (state) => state.todos;
-const totodsSelector = createSelector(getTodos,(todos) =>  todos);
 const mapStateToProps = state => ({todos: totodsSelector(state)});
 
 const mapDispatchToProps = dispatch => ({
