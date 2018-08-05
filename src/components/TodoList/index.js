@@ -1,5 +1,6 @@
 import React from 'react'
 import AddTodo from '../AddTodo';
+import TodoItem from '../TodoItem'
 
 const TodoList = (props) => {
 
@@ -8,15 +9,8 @@ const TodoList = (props) => {
       <div>
         <AddTodo addTodoAction={props.addTodoAction}/>
         <ul>
-          {props.todos.map(todo =>
-            <li
-              key={todo.id}
-            >
-              <div className="list-item">
-                <div>{todo.text}</div>
-                <button onClick={() => props.removeTodoAction(todo.id)}>X</button>
-              </div>
-            </li>
+          {props.todos.map((todo) =>
+            <TodoItem todo={{...todo}} clickRemoveAction={props.removeTodoAction}/>
           )}
         </ul>
       </div>
