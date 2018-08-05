@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 class AddTodo extends React.Component {
   constructor(props){
     super(props)
@@ -27,6 +27,11 @@ class AddTodo extends React.Component {
       </div>
     )
   }
+}
+
+AddTodo.proptypes = {
+  todoText:PropTypes.string,
+  addTodoAction:PropTypes.func,
 }
 
 export default AddTodo
