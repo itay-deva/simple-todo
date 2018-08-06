@@ -1,4 +1,8 @@
-import { ADD_TODO, REMOVE_TODO } from '../constants/todos.constants';
+import { 
+   ADD_TODO,
+   GET_TODOS ,
+   REMOVE_TODO
+   } from '../constants/todos.constants';
 import { v4 } from 'node-uuid';
 
 export const addTodoAction = text => ({
@@ -7,6 +11,14 @@ export const addTodoAction = text => ({
     id: v4(),
     text
   }
+})
+
+export const getTodosAction = () => ({
+  type: GET_TODOS,
+})
+
+export const getTodosSuccessAction = () => ({
+  type: GET_TODOS_SUCCESS
 })
 
 export const removeTodoAction = (id) => ({
