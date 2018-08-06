@@ -1,4 +1,4 @@
-import todos from './todos.json';
+const todos = require('./todos.json');
 
 export default
 /**
@@ -33,7 +33,8 @@ function (match, params, headers, context) {
  * @param {Object} params
  */
 const handleGetRequests = (route, params) => {
-    if (route === '/todos') {
+  console.log('ff')
+    if (route === '/') {
         return todos;
     }
 }

@@ -8,13 +8,17 @@ export function* getTodos(){
   console.log('dd')
   try {
     const result = yield fetch(baseUrl,{
-      method: 'get',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       }
     })
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => console.log(data))
+    .catch((err) => {
+      console.log();
+      console.error();
+    });
 
     yield put(getTodosSuccessAction(result));
   } catch (error) {
