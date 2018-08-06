@@ -10,7 +10,8 @@ import App from './components/App';
 // import { loadState, saveState } from './localStorage-conf';
 import request from 'superagent';
 import mock from 'superagent-mock';
-import mockConfig from '../../mock/config';
+import mockConfig from './mock/config';
+import { todosSaga } from './middleWare/saga'
 
 // initialize superagent-mock
 mock(request, mockConfig);
@@ -22,6 +23,8 @@ const store = createStore(
   rootReducer,
   compose(applyMiddleware(sagaMiddleware))
 )
+
+sagaMiddleware.run(todosSaga);
 
 // store.subscribe(() => { // needs to move reducer
 //   saveState({

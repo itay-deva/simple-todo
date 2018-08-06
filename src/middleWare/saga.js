@@ -5,6 +5,7 @@ import { addTodoAction, getTodosAction ,getTodosSuccessAction, removeTodoAction 
 const baseUrl = 'todos-api';
 
 export function* getTodos(){
+  console.log('dd')
   try {
     const result = yield fetch(baseUrl,{
       method: 'get',

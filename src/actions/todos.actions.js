@@ -14,9 +14,11 @@ export const addTodoAction = text => ({
   }
 })
 
-export const getTodosAction = () => ({
+export const getTodosAction = () => {
+  console.log('ss')
+  return ({
   type: GET_TODOS,
-})
+})}
 
 export const getTodosSuccessAction = () => ({
   type: GET_TODOS_SUCCESS

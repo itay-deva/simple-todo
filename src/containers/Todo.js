@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addTodoAction, removeTodoAction } from '../actions/todos.actions';
+import { addTodoAction, getTodosAction, removeTodoAction } from '../actions/todos.actions';
 import AddTodo from '../components/AddTodo';
 import TodoItem from '../components/TodoItem';
 import totodsSelector from '../selectors/totos.selectors';
@@ -10,23 +10,32 @@ const mapStateToProps = state => ({todos: totodsSelector(state)});
 
 const mapDispatchToProps = dispatch => ({
   addTodoAction: (todoText) => dispatch(addTodoAction(todoText)),
+  getTodosAction: () => dispatch(getTodosAction()),
   removeTodoAction: (todoId) => dispatch(removeTodoAction(todoId))
 })
 
 
-const TodoList = (props) => {
+class TodoList extends React.Component {
+  constructor(props){
+    super(props)
+  }
 
+  componentDidMount(){
+    this.props.getTodosAction();
+  }
   // the reasonfor input is to change it with out making setstate, which will cause a render
+  render(){
     return (
       <div>
-        <AddTodo addTodoAction={props.addTodoAction}/>
+        <AddTodo addTodoAction={this.props.addTodoAction}/>
         <ul>
-          {props.todos.map((todo) =>
-            <TodoItem key={todo.id} todo={{...todo}} clickRemoveAction={props.removeTodoAction}/>
+          {this.props.todos.map((todo) =>
+            <TodoItem key={todo.id} todo={{...todo}} clickRemoveAction={this.props.removeTodoAction}/>
           )}
         </ul>
       </div>
     )
+  }
 }
 
 TodoItem.prototypes = {
