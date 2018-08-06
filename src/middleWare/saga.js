@@ -17,6 +17,7 @@ export function* getTodos(){
 
     yield put(getTodosSuccessAction(result));
   } catch (error) {
+    console.log('error: ',error);
     
   }
 }
