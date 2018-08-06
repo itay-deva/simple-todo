@@ -22,7 +22,7 @@ const TodoList = (props) => {
         <AddTodo addTodoAction={props.addTodoAction}/>
         <ul>
           {props.todos.map((todo) =>
-            <TodoItem todo={{...todo}} clickRemoveAction={props.removeTodoAction}/>
+            <TodoItem key={todo.id} todo={{...todo}} clickRemoveAction={props.removeTodoAction}/>
           )}
         </ul>
       </div>

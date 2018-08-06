@@ -1,11 +1,10 @@
 import { ADD_TODO, REMOVE_TODO } from '../constants/todos.constants';
-
-let nextTodoId = 0
+import { v4 } from 'node-uuid';
 
 export const addTodoAction = text => ({
   type: ADD_TODO,
   payload:{
-    id: nextTodoId++,
+    id: v4(),
     text
   }
 })
