@@ -1,0 +1,18 @@
+.list-item {
+    width:150px;
+
+    // &__text {
+        
+    // }
+    
+    &__btn {
+        background-color: crimson;
+        margin-left: 10px;
+        border: none;
+    }
+
+    &.--completed {
+        color: blue;
+    }
+}
+

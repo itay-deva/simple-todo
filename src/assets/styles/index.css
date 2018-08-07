@@ -8,10 +8,3 @@ ul {
   list-style-type: none;
 }
 
-.list-item {
-  display: flex;
-  width: 100px;
-  flex-direction: row;
-  margin-left: 37%;
-  padding: 0;
-}

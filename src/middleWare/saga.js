@@ -1,7 +1,7 @@
-import { takeLatest, put, select } from 'redux-saga/effects';
-import {  ADD_TODO , GET_TODOS, REMOVE_TODO} from './../constants/todos.constants';
+import { takeLatest, put } from 'redux-saga/effects';
+import {  GET_TODOS} from './../constants/todos.constants';
 import request from 'superagent';
-import { addTodoAction, getTodosAction ,getTodosSuccessAction, removeTodoAction } from './../actions/todos.actions';
+import { getTodosSuccessAction } from './../actions/todos.actions';
 
 const baseUrl = '/todos-api/';
 
