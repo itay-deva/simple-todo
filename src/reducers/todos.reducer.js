@@ -14,7 +14,7 @@ const todos = (state = [] , action) => {
     case GET_TODOS_SUCCESS:
       return [
         ...state,
-        action.payload
+        ...action.payload
       ]
     case REMOVE_TODO:
       return state.filter(todo => (todo.id !== action.payload.id))

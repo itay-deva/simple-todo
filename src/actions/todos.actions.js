@@ -15,13 +15,13 @@ export const addTodoAction = text => ({
 })
 
 export const getTodosAction = () => {
-  console.log('ss')
   return ({
   type: GET_TODOS,
 })}
 
-export const getTodosSuccessAction = () => ({
-  type: GET_TODOS_SUCCESS
+export const getTodosSuccessAction = (payload) => ({
+  type: GET_TODOS_SUCCESS,
+  payload
 })
 
 export const removeTodoAction = (id) => ({

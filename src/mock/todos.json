@@ -1,32 +1,27 @@
 [
   {
     "isCompleted": false,
-    "mission": "buy egges",
-    "location": "supermarket",
+    "text": "buy egges",
     "id": 1
   },
   {
     "isCompleted": false,
-    "mission": "buy shampo",
-    "location": "supermarket",
+    "text": "buy shampo",
     "id": 2
   },
   {
     "isCompleted": false,
-    "mission": "go to meetup",
-    "location": "devalore new office",
+    "text": "go to meetup",
     "id": 3
   },
   {
     "isCompleted": false,
-    "mission": "make a coffie",
-    "location": "devalore new office",
+    "text": "make a coffie",
     "id": 4
   },
   {
     "isCompleted": false,
-    "mission": "do something",
-    "location": "devalore new office",
+    "text": "do something",
     "id": 5
   }
 ]

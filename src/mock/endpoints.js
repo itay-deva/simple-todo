@@ -8,7 +8,7 @@ export default
 * @param context object the context of running the fixtures function
 */
 function (match, params, headers, context) {
-    const route = match[1];
+    const route = match[0];
     let result;
 
     switch (context.method) {
@@ -33,8 +33,7 @@ function (match, params, headers, context) {
  * @param {Object} params
  */
 const handleGetRequests = (route, params) => {
-  console.log('ff')
-    if (route === '/') {
+    if (route === 'todos-api/') {
         return todos;
     }
 }
